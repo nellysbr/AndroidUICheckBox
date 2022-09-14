@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <CheckBox
-        android:id="@+id/checkBox13"
+        android:id="@+id/refrigerante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -16,10 +16,10 @@
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+        app:layout_constraintTop_toBottomOf="@+id/feijao" />
 
     <CheckBox
-        android:id="@+id/checkBox12"
+        android:id="@+id/carne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Carne (R$ 22.00)"
@@ -27,10 +27,10 @@
         app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
+        app:layout_constraintTop_toBottomOf="@+id/leite" />
 
     <CheckBox
-        android:id="@+id/checkBox11"
+        android:id="@+id/leite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Leite (R$ 5.54)"
@@ -38,12 +38,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox10"
+        app:layout_constraintTop_toBottomOf="@+id/arroz"
         android:textStyle="bold"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
-        android:id="@+id/checkBox10"
+        android:id="@+id/arroz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Arroz (R$ 3.35)"
@@ -69,20 +69,19 @@
         app:layout_constraintVertical_bias="0.084" />
 
     <CheckBox
-        android:id="@+id/checkBox9"
+        android:id="@+id/feijao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Feijão (R$ 6.65)"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox12"
+        app:layout_constraintTop_toBottomOf="@+id/carne"
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/resultText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -106,6 +105,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:insetTop="0dp"
+        android:onClick="handleCalc"
         android:insetBottom="0dp"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -116,9 +116,9 @@
         android:text="R$"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/resultText"
         app:layout_constraintHorizontal_bias="0.395"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/resultText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.779" />
 
